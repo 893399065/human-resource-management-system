@@ -125,12 +125,16 @@ namespace staff_management
             comboBox_post.DataSource = ds.Tables["T_POST"];
             comboBox_post.DisplayMember = "VC_POST_NAME";
             comboBox_post.SelectedIndex = -1;
+
+            
         }
 
-
+        List<ToolTip> listTp= new List<ToolTip>(); 
 
         private void button1_Click(object sender, EventArgs e)
         {
+
+
             DataRow dr = ds.Tables["T_EMPLOYEE"].NewRow();
             bool save = true;
             if(textBox_name.Text.Length >=2 && textBox_name.Text.Length <= 30)
@@ -139,14 +143,21 @@ namespace staff_management
             }
             else
             {
+                ToolTip tp = new ToolTip();
+                tp.Show("姓名填入有误", this.textBox_name);
+                listTp.Add(tp);
                 save = false;
             }
             if(comboBox_sex.SelectedIndex != -1)
             {
+                
                 dr["N_GENDER"] = comboBox_sex.SelectedIndex;
             }
             else
             {
+                ToolTip tp = new ToolTip();
+                tp.Show("未选择性别", this.comboBox_sex);
+                listTp.Add(tp);
                 save = false;
             }
             if(comboBox_year.SelectedIndex != -1 && comboBox_month.SelectedIndex != -1 && comboBox_day.SelectedIndex != -1)
@@ -159,6 +170,9 @@ namespace staff_management
             }
             else
             {
+                ToolTip tp = new ToolTip();
+                tp.Show("出生日期选择有误", this.comboBox_day);
+                listTp.Add(tp);
                 save = false;
             }
             if(textBox_id.Text.Length >= 15 && textBox_id.Text.Length <= 18)
@@ -168,46 +182,76 @@ namespace staff_management
             }
             else
             {
+                ToolTip tp = new ToolTip();
+                tp.Show("身份证输入有误", this.textBox_id);
+                listTp.Add(tp);
                 save = false;
             }
             if(textBox_place.Text != "")
             {
-                dr["VC_NATIVE_PLACE"] = textBox_place.Text;
+                if (textBox_place.TextLength >= 3 && textBox_place.TextLength <= 30)
+                {
+                    dr["VC_NATIVE_PLACE"] = textBox_place.Text;
+                }
+                else
+                {
+                    ToolTip tp = new ToolTip();
+                    tp.Show("籍贯输入有误", this.textBox_place);
+                    listTp.Add(tp);
+                    save = false;
+                }
+                
             }
+
             if(comboBox_degree.SelectedIndex != -1)
             {
-                dr["N_EDU_LEVEL"] = comboBox_degree.SelectedIndex;
+                dr["N_EDU_LEVEL"] = comboBox_degree.SelectedIndex+1;
             }
-            if(comboBox_nation.SelectedIndex != -1)
+
+            if (comboBox_nation.SelectedIndex != -1)
             {
-                dr["N_NANTION"] = comboBox_nation.SelectedIndex;
+                dr["N_NATION"] = comboBox_nation.SelectedIndex+1;
             }
-            if(comboBox_polity.SelectedIndex != -1)
+
+
+            if (comboBox_polity.SelectedIndex != -1)
             {
-                dr["N_PARTY"] = comboBox_polity.SelectedIndex;
+                dr["N_PARTY"] = comboBox_polity.SelectedIndex+1;
             }
-            if(comboBox_health.SelectedIndex != -1)
+
+
+            if (comboBox_health.SelectedIndex != -1)
             {
-                dr["N_HEALTH"] = comboBox_health.SelectedIndex;
+                dr["N_HEALTH"] = comboBox_health.SelectedIndex+1;
             }
-            if(comboBox_account.SelectedIndex != -1)
+
+
+            if (comboBox_account.SelectedIndex != -1)
             {
                 dr["N_REG_TYPE"] = comboBox_account.SelectedIndex;
             }
-            if(textBox_workid.Text.Length == 12)
+
+            if (textBox_workid.Text.Length == 12)
             {
                 dr["VC_EMP_CODE"] = textBox_workid.Text;
             }
             else
             {
+                ToolTip tp = new ToolTip();
+                tp.Show("工号输入有误", this.textBox_workid);
+                listTp.Add(tp);
                 save = false;
             }
+
             if(comboBox_department.SelectedIndex != -1)
             {
                 dr["N_DEPT_ID"] = comboBox_department.SelectedIndex;
             }
             else
             {
+                ToolTip tp = new ToolTip();
+                tp.Show("部门选择有误", this.comboBox_department);
+                listTp.Add(tp);
                 save = false;
             }
             if(comboBox_title.SelectedIndex != -1)
@@ -216,6 +260,9 @@ namespace staff_management
             }
             else
             {
+                ToolTip tp = new ToolTip();
+                tp.Show("职称选择有误", this.comboBox_title);
+                listTp.Add(tp);
                 save = false;
             }
             if(comboBox_post.SelectedIndex != -1)
@@ -224,16 +271,23 @@ namespace staff_management
             }
             else
             {
+                ToolTip tp = new ToolTip();
+                tp.Show("岗位选择有误", this.comboBox_post);
+                listTp.Add(tp);
                 save = false;
             }
             if(comboBox_state.SelectedIndex != -1)
             {
-                dr["N_STATUS"] = comboBox_state.SelectedIndex;
+                dr["N_STATUS"] = comboBox_state.SelectedIndex+1;
             }
             else
             {
+                ToolTip tp = new ToolTip();
+                tp.Show("状态选择有误", this.comboBox_state);
+                listTp.Add(tp);
                 save = false;
             }
+
             if(save == true)
             {
                 MessageBox.Show("it here");
@@ -259,15 +313,19 @@ namespace staff_management
                     conn.Close();
                 }
             }
-            else
-            {
-                MessageBox.Show("信息不完整");
-            }
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void button1_Leave(object sender, EventArgs e)
+        {
+            foreach (var item in listTp)
+            {
+                item.Dispose();
+            }
         }
     }
 }

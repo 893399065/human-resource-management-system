@@ -1,6 +1,6 @@
 ﻿namespace staff_management
 {
-    partial class baseModify
+    partial class MainForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,6 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.groupBox_base_modify = new System.Windows.Forms.GroupBox();
             this.label_workid = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
@@ -69,8 +72,41 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label_name = new System.Windows.Forms.Label();
             this.label_base_info = new System.Windows.Forms.Label();
+            this.tabControl1.SuspendLayout();
+            this.tabPage1.SuspendLayout();
             this.groupBox_base_modify.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // tabControl1
+            // 
+            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Location = new System.Drawing.Point(12, 12);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(776, 525);
+            this.tabControl1.TabIndex = 0;
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.Controls.Add(this.groupBox_base_modify);
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(768, 499);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "tabPage1";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(768, 499);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "tabPage2";
+            this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // groupBox_base_modify
             // 
@@ -115,11 +151,11 @@
             this.groupBox_base_modify.Controls.Add(this.label_name);
             this.groupBox_base_modify.Controls.Add(this.label_base_info);
             this.groupBox_base_modify.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.groupBox_base_modify.Location = new System.Drawing.Point(12, 12);
+            this.groupBox_base_modify.Location = new System.Drawing.Point(6, 6);
             this.groupBox_base_modify.Name = "groupBox_base_modify";
             this.groupBox_base_modify.Padding = new System.Windows.Forms.Padding(3, 0, 3, 0);
-            this.groupBox_base_modify.Size = new System.Drawing.Size(731, 514);
-            this.groupBox_base_modify.TabIndex = 2;
+            this.groupBox_base_modify.Size = new System.Drawing.Size(762, 487);
+            this.groupBox_base_modify.TabIndex = 3;
             this.groupBox_base_modify.TabStop = false;
             this.groupBox_base_modify.Text = "员工信息变更";
             // 
@@ -206,7 +242,6 @@
             this.button_work_sure.TabIndex = 39;
             this.button_work_sure.Text = "确定";
             this.button_work_sure.UseVisualStyleBackColor = true;
-            this.button_work_sure.Click += new System.EventHandler(this.button_work_sure_Click);
             // 
             // textBox_workid
             // 
@@ -234,7 +269,6 @@
             this.button_base_cancle.TabIndex = 6;
             this.button_base_cancle.Text = "取消";
             this.button_base_cancle.UseVisualStyleBackColor = true;
-            this.button_base_cancle.Click += new System.EventHandler(this.button_base_cancle_Click);
             // 
             // button_base_sure
             // 
@@ -244,8 +278,6 @@
             this.button_base_sure.TabIndex = 6;
             this.button_base_sure.Text = "确定";
             this.button_base_sure.UseVisualStyleBackColor = true;
-            this.button_base_sure.Click += new System.EventHandler(this.button_base_sure_Click);
-            this.button_base_sure.Leave += new System.EventHandler(this.button_base_sure_Leave);
             // 
             // label29
             // 
@@ -288,7 +320,7 @@
             // 
             this.label19.AutoSize = true;
             this.label19.ForeColor = System.Drawing.Color.Red;
-            this.label19.Location = new System.Drawing.Point(389, 184);
+            this.label19.Location = new System.Drawing.Point(359, 184);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(11, 12);
             this.label19.TabIndex = 4;
@@ -341,7 +373,7 @@
             this.comboBox_degree.FormattingEnabled = true;
             this.comboBox_degree.Location = new System.Drawing.Point(307, 291);
             this.comboBox_degree.Name = "comboBox_degree";
-            this.comboBox_degree.Size = new System.Drawing.Size(76, 20);
+            this.comboBox_degree.Size = new System.Drawing.Size(48, 20);
             this.comboBox_degree.TabIndex = 3;
             // 
             // comboBox_sex
@@ -349,7 +381,7 @@
             this.comboBox_sex.FormattingEnabled = true;
             this.comboBox_sex.Location = new System.Drawing.Point(307, 180);
             this.comboBox_sex.Name = "comboBox_sex";
-            this.comboBox_sex.Size = new System.Drawing.Size(76, 20);
+            this.comboBox_sex.Size = new System.Drawing.Size(48, 20);
             this.comboBox_sex.TabIndex = 3;
             // 
             // textBox_palce
@@ -505,16 +537,16 @@
             this.label_base_info.TabIndex = 0;
             this.label_base_info.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // baseModify
+            // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(759, 538);
-            this.Controls.Add(this.groupBox_base_modify);
-            this.Name = "baseModify";
-            this.Text = "modify";
-            this.Load += new System.EventHandler(this.baseModify_Load);
+            this.ClientSize = new System.Drawing.Size(828, 578);
+            this.Controls.Add(this.tabControl1);
+            this.Name = "MainForm";
+            this.Text = "MainForm";
+            this.tabControl1.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
             this.groupBox_base_modify.ResumeLayout(false);
             this.groupBox_base_modify.PerformLayout();
             this.ResumeLayout(false);
@@ -523,7 +555,21 @@
 
         #endregion
 
+        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.GroupBox groupBox_base_modify;
+        private System.Windows.Forms.Label label_workid;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.ComboBox comboBox_day;
+        private System.Windows.Forms.ComboBox comboBox_month;
+        private System.Windows.Forms.ComboBox comboBox_year;
+        private System.Windows.Forms.Button button_work_sure;
+        private System.Windows.Forms.TextBox textBox_workid;
+        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button_base_cancle;
         private System.Windows.Forms.Button button_base_sure;
         private System.Windows.Forms.Label label29;
@@ -553,16 +599,5 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label_name;
         private System.Windows.Forms.Label label_base_info;
-        private System.Windows.Forms.Button button_work_sure;
-        private System.Windows.Forms.TextBox textBox_workid;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Label label31;
-        private System.Windows.Forms.Label label32;
-        private System.Windows.Forms.Label label33;
-        private System.Windows.Forms.ComboBox comboBox_day;
-        private System.Windows.Forms.ComboBox comboBox_month;
-        private System.Windows.Forms.ComboBox comboBox_year;
-        private System.Windows.Forms.Label label_workid;
     }
 }

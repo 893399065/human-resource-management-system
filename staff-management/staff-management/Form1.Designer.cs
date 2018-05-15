@@ -32,6 +32,13 @@
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox_join = new System.Windows.Forms.GroupBox();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label31 = new System.Windows.Forms.Label();
+            this.label32 = new System.Windows.Forms.Label();
+            this.label33 = new System.Windows.Forms.Label();
+            this.comboBox_day = new System.Windows.Forms.ComboBox();
+            this.comboBox_month = new System.Windows.Forms.ComboBox();
+            this.comboBox_year = new System.Windows.Forms.ComboBox();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.label30 = new System.Windows.Forms.Label();
@@ -44,7 +51,6 @@
             this.label23 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.comboBox_state = new System.Windows.Forms.ComboBox();
@@ -55,9 +61,6 @@
             this.comboBox_health = new System.Windows.Forms.ComboBox();
             this.comboBox_polity = new System.Windows.Forms.ComboBox();
             this.comboBox_nation = new System.Windows.Forms.ComboBox();
-            this.comboBox_day = new System.Windows.Forms.ComboBox();
-            this.comboBox_month = new System.Windows.Forms.ComboBox();
-            this.comboBox_year = new System.Windows.Forms.ComboBox();
             this.comboBox_degree = new System.Windows.Forms.ComboBox();
             this.comboBox_sex = new System.Windows.Forms.ComboBox();
             this.textBox_workid = new System.Windows.Forms.TextBox();
@@ -103,6 +106,13 @@
             // 
             // groupBox_join
             // 
+            this.groupBox_join.Controls.Add(this.label20);
+            this.groupBox_join.Controls.Add(this.label31);
+            this.groupBox_join.Controls.Add(this.label32);
+            this.groupBox_join.Controls.Add(this.label33);
+            this.groupBox_join.Controls.Add(this.comboBox_day);
+            this.groupBox_join.Controls.Add(this.comboBox_month);
+            this.groupBox_join.Controls.Add(this.comboBox_year);
             this.groupBox_join.Controls.Add(this.button2);
             this.groupBox_join.Controls.Add(this.button1);
             this.groupBox_join.Controls.Add(this.label30);
@@ -115,7 +125,6 @@
             this.groupBox_join.Controls.Add(this.label23);
             this.groupBox_join.Controls.Add(this.label22);
             this.groupBox_join.Controls.Add(this.label21);
-            this.groupBox_join.Controls.Add(this.label20);
             this.groupBox_join.Controls.Add(this.label19);
             this.groupBox_join.Controls.Add(this.label18);
             this.groupBox_join.Controls.Add(this.comboBox_state);
@@ -126,9 +135,6 @@
             this.groupBox_join.Controls.Add(this.comboBox_health);
             this.groupBox_join.Controls.Add(this.comboBox_polity);
             this.groupBox_join.Controls.Add(this.comboBox_nation);
-            this.groupBox_join.Controls.Add(this.comboBox_day);
-            this.groupBox_join.Controls.Add(this.comboBox_month);
-            this.groupBox_join.Controls.Add(this.comboBox_year);
             this.groupBox_join.Controls.Add(this.comboBox_degree);
             this.groupBox_join.Controls.Add(this.comboBox_sex);
             this.groupBox_join.Controls.Add(this.textBox_workid);
@@ -160,6 +166,73 @@
             this.groupBox_join.TabStop = false;
             this.groupBox_join.Text = "员工入职管理";
             // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(497, 116);
+            this.label20.Margin = new System.Windows.Forms.Padding(0);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(17, 12);
+            this.label20.TabIndex = 49;
+            this.label20.Text = "日";
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Location = new System.Drawing.Point(432, 117);
+            this.label31.Margin = new System.Windows.Forms.Padding(0);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(17, 12);
+            this.label31.TabIndex = 48;
+            this.label31.Text = "月";
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Location = new System.Drawing.Point(367, 117);
+            this.label32.Margin = new System.Windows.Forms.Padding(0);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(17, 12);
+            this.label32.TabIndex = 47;
+            this.label32.Text = "年";
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.ForeColor = System.Drawing.Color.Red;
+            this.label33.Location = new System.Drawing.Point(517, 116);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(11, 12);
+            this.label33.TabIndex = 46;
+            this.label33.Text = "*";
+            // 
+            // comboBox_day
+            // 
+            this.comboBox_day.FormattingEnabled = true;
+            this.comboBox_day.Location = new System.Drawing.Point(449, 112);
+            this.comboBox_day.Margin = new System.Windows.Forms.Padding(0);
+            this.comboBox_day.Name = "comboBox_day";
+            this.comboBox_day.Size = new System.Drawing.Size(48, 20);
+            this.comboBox_day.TabIndex = 43;
+            // 
+            // comboBox_month
+            // 
+            this.comboBox_month.FormattingEnabled = true;
+            this.comboBox_month.Location = new System.Drawing.Point(384, 113);
+            this.comboBox_month.Margin = new System.Windows.Forms.Padding(0, 3, 0, 3);
+            this.comboBox_month.Name = "comboBox_month";
+            this.comboBox_month.Size = new System.Drawing.Size(48, 20);
+            this.comboBox_month.TabIndex = 44;
+            // 
+            // comboBox_year
+            // 
+            this.comboBox_year.FormattingEnabled = true;
+            this.comboBox_year.Location = new System.Drawing.Point(304, 113);
+            this.comboBox_year.Margin = new System.Windows.Forms.Padding(0);
+            this.comboBox_year.Name = "comboBox_year";
+            this.comboBox_year.Size = new System.Drawing.Size(63, 20);
+            this.comboBox_year.TabIndex = 45;
+            // 
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(456, 544);
@@ -179,6 +252,7 @@
             this.button1.Text = "确定";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.Leave += new System.EventHandler(this.button1_Leave);
             // 
             // label30
             // 
@@ -201,7 +275,7 @@
             // label28
             // 
             this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(477, 146);
+            this.label28.Location = new System.Drawing.Point(477, 147);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(89, 12);
             this.label28.TabIndex = 5;
@@ -250,7 +324,7 @@
             // 
             this.label23.AutoSize = true;
             this.label23.ForeColor = System.Drawing.Color.Red;
-            this.label23.Location = new System.Drawing.Point(386, 419);
+            this.label23.Location = new System.Drawing.Point(386, 414);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(11, 12);
             this.label23.TabIndex = 4;
@@ -275,16 +349,6 @@
             this.label21.Size = new System.Drawing.Size(11, 12);
             this.label21.TabIndex = 4;
             this.label21.Text = "*";
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.ForeColor = System.Drawing.Color.Red;
-            this.label20.Location = new System.Drawing.Point(483, 116);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(11, 12);
-            this.label20.TabIndex = 4;
-            this.label20.Text = "*";
             // 
             // label19
             // 
@@ -369,30 +433,6 @@
             this.comboBox_nation.Name = "comboBox_nation";
             this.comboBox_nation.Size = new System.Drawing.Size(102, 20);
             this.comboBox_nation.TabIndex = 8;
-            // 
-            // comboBox_day
-            // 
-            this.comboBox_day.FormattingEnabled = true;
-            this.comboBox_day.Location = new System.Drawing.Point(429, 112);
-            this.comboBox_day.Name = "comboBox_day";
-            this.comboBox_day.Size = new System.Drawing.Size(48, 20);
-            this.comboBox_day.TabIndex = 4;
-            // 
-            // comboBox_month
-            // 
-            this.comboBox_month.FormattingEnabled = true;
-            this.comboBox_month.Location = new System.Drawing.Point(375, 112);
-            this.comboBox_month.Name = "comboBox_month";
-            this.comboBox_month.Size = new System.Drawing.Size(48, 20);
-            this.comboBox_month.TabIndex = 3;
-            // 
-            // comboBox_year
-            // 
-            this.comboBox_year.FormattingEnabled = true;
-            this.comboBox_year.Location = new System.Drawing.Point(304, 112);
-            this.comboBox_year.Name = "comboBox_year";
-            this.comboBox_year.Size = new System.Drawing.Size(63, 20);
-            this.comboBox_year.TabIndex = 2;
             // 
             // comboBox_degree
             // 
@@ -622,6 +662,7 @@
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(844, 641);
             this.Controls.Add(this.groupBox_join);
+            this.MaximumSize = new System.Drawing.Size(860, 680);
             this.Name = "Form_base";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -664,7 +705,6 @@
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.ComboBox comboBox_state;
@@ -675,9 +715,6 @@
         private System.Windows.Forms.ComboBox comboBox_health;
         private System.Windows.Forms.ComboBox comboBox_polity;
         private System.Windows.Forms.ComboBox comboBox_nation;
-        private System.Windows.Forms.ComboBox comboBox_day;
-        private System.Windows.Forms.ComboBox comboBox_month;
-        private System.Windows.Forms.ComboBox comboBox_year;
         private System.Windows.Forms.ComboBox comboBox_degree;
         private System.Windows.Forms.ComboBox comboBox_sex;
         private System.Windows.Forms.TextBox textBox_workid;
@@ -685,6 +722,13 @@
         private System.Windows.Forms.TextBox textBox_id;
         private System.Windows.Forms.TextBox textBox_name;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.ComboBox comboBox_day;
+        private System.Windows.Forms.ComboBox comboBox_month;
+        private System.Windows.Forms.ComboBox comboBox_year;
     }
 }
 
