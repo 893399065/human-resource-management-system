@@ -248,6 +248,10 @@ namespace staff_management
                         da.Update(ds, "T_EMP");
                         ds.Tables["T_EMP"].AcceptChanges();
                         MessageBox.Show("信息修改成功");
+                        string str = "你正在修改员工 ";
+                        str += dr[0]["VC_EMP_NAME"].ToString() + " 的信息";
+                        label_base_info.Text = str;
+
                     }
                     catch (Exception ex)
                     {
